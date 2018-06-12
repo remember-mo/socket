@@ -46,6 +46,9 @@ class WSGIServer(object):
 
         self.parse_request(request_data)
         env = self.get_environ()
+        print '================here is env==================='
+        print env
+        print '================end==================='
 
         #给flask\tornado传递两个参数，environ，start_response
         result = self.application(env, self.start_response)
